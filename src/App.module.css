@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main {
+    max-width: 1140px;
+    margin: 0 auto
+}
+
+.headerContainer {
+    margin: 40px auto;
+    width: 100%
+}
+
+.container {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    column-gap: 80px;
+}
+
+.container .leftSide {
+    flex: 1
+}
+
+
+.container .leftSide h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3A4B5C
+}
+
+.container .leftSide p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #6A7D8B;
+}
+
+.container .leftSide input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: 0
+}
+
+
+.container .leftSide input[type="submit"] {
+    background-color: #227C9D;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all .3s ease;
+}
+
+.container .leftSide input[type="submit"]:hover {
+    opacity: 0.9;
+
+}
+
+.container .rightSide {
+    flex: 1;
+    display: flex;
+}
+
+.container .rightSide .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px
+}
+
+
+.container .rightSide .rightBig {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+.container .rightSide .rightArrow {
+    position: absolute;
+    background-color: #227C9D;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: -35px;
+    top: 145px;
+    transition: all ease .3s
+}
+
+.container .rightSide .rightArrow:hover {
+    opacity: .8;
+}
+
+.container .leftSide input:disabled {
+    opacity: .5 !important;
+}
+
+@media (max-width: 767px) {
+    .container {
+        column-gap: 20px;
+    }
+
+    .container .leftSide h1 {
+        font-size: 25px;
+    }
+
+    .container .leftSide p {
+        font-size: 13px;
+    }
+
+    .container .rightSide .rightArrow {
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+        width: 35px;
+        height: 35px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container .rightSide .grid {
+        grid-template-columns: 1fr;
+        gap: 10px
+    }
+}
